@@ -1,0 +1,3 @@
+all: 
+	cd enovelhub-website
+	go-bindata -ignore .git -o ../bindata.go ./...
