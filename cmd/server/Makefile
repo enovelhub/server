@@ -4,7 +4,8 @@ WEBSITE_PATH=enovelhub-website
 all: website bindata
 
 bindata: clear-bindata
-	go-bindata -ignore .git -o ${BINDATA_PATH} ${WEBSITE_PATH}/...
+	cd ${WEBSITE_PATH} && \
+	go-bindata -ignore .git  -o ${BINDATA_PATH} ./...
 
 clear-bindata:
 	rm -rf ${BINDATA_PATH}
