@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"strings"
 	"os"
+	"strings"
 
 	"github.com/enovelhub/capture/book"
 	_ "github.com/enovelhub/enovelhub-website"
@@ -77,8 +77,8 @@ func main() {
 
 		})
 	*/
-	log.Print("Listen on :8904")
-	log.Fatal(http.ListenAndServe(":8904", nil))
+	log.Print("Listen on 0.0.0.0:8904")
+	log.Fatal(http.ListenAndServe("0.0.0.0:8904", nil))
 
 	//	ShowDir("", 0)
 }
